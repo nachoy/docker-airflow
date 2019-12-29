@@ -26,9 +26,6 @@ export \
   AIRFLOW__CORE__LOAD_EXAMPLES \
   AIRFLOW__CORE__SQL_ALCHEMY_CONN \
 
-sudo chown -R ubuntu /home/ubuntu/airflow
-sudo chgrp -R ubuntu /home/ubuntu/airflow
-
 # Load DAGs exemples (default: Yes)
 if [[ -z "$AIRFLOW__CORE__LOAD_EXAMPLES" && "${LOAD_EX:=n}" == n ]]
 then
