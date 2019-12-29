@@ -26,8 +26,6 @@ export \
   AIRFLOW__CORE__LOAD_EXAMPLES \
   AIRFLOW__CORE__SQL_ALCHEMY_CONN \
 
-  whoami >> /tmp/usuario.txt
-  
 
 # Load DAGs exemples (default: Yes)
 if [[ -z "$AIRFLOW__CORE__LOAD_EXAMPLES" && "${LOAD_EX:=n}" == n ]]
@@ -95,5 +93,6 @@ case "$1" in
   *)
     # The command is something like bash, not an airflow subcommand. Just run it in the right environment.
     exec "$@"
+    sleep 10000
     ;;
 esac
