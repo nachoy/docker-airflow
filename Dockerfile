@@ -77,8 +77,7 @@ RUN chown -R airflow: ${AIRFLOW_USER_HOME}
 
 EXPOSE 8080 5555 8793
 
-USER 23412334
+USER airflow
 WORKDIR ${AIRFLOW_USER_HOME}
 ENTRYPOINT ["/entrypoint.sh"]
-CMD ["/bin/echo","Hello world "] # set default arg for entrypoint
-#CMD ["webserver"] # set default arg for entrypoint
+CMD ["webserver"] # set default arg for entrypoint
